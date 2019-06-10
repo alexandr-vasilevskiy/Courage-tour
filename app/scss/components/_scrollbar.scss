@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the scrollbar component.
+// -----------------------------------------------------------------------------
+
+.scroll-wrapper {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding: 70px 0 70px 90px;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    padding: 70px;
+  }
+  @media screen and (max-width: 640px) {
+    padding: 40px 20px 0;
+  }
+  @media screen and (max-width: 480px) {
+    padding-top: 25px;
+  }
+  .scroll {
+    max-height: calc(16px * 8 * 1.5);
+    width: 100%;
+    p {
+      margin: 0;
+      padding-right: 70px;
+      line-height: 1.5;
+      @media screen and (max-width: 640px) {
+        padding-right: 40px;
+      }
+    }
+    .simplebar-track {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 100%;
+        background-color: #e1e0e0;
+      }
+      .simplebar-scrollbar {
+        width: 8px;
+        &::before {
+          opacity: 1;
+          background-color: $brand-color;
+        }
+      }
+    }
+  }
+}

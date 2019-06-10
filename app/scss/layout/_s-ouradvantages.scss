@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to s-banner of the site/application.
+// -----------------------------------------------------------------------------
+
+.s-ouradvantages {
+  padding: 40px 0 63px;
+  background-color: $mid-grey;
+  .h2 {
+    @media screen and (max-width: 992px) {
+      text-align: center;
+    }
+    @media screen and (max-width: 992px) {
+      padding-bottom: 20px;
+    }
+  }
+  .content-wrapper {
+    display: flex;
+    @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .img-wrapper {
+      display: flex;
+      align-items: center;
+      min-width: 40%;
+    }
+  }
+}

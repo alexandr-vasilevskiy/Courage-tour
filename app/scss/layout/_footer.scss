@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+footer {
+  background-color: $footer-color;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  @media screen and (max-width: 807px) {
+    position: relative;
+  }
+}
+
+.footer {
+  display: flex;
+  margin: 50px 0;
+  justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+  .footer-col {
+    &-1 {
+      width: 38%;
+      padding-right: 9%;
+      @media screen and (max-width: 1200px) {
+        padding-right: 0;
+      }
+      @media screen and (max-width: 768px) {
+        width: 50%;
+        margin-bottom: 25px;
+      }
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        border-bottom: 1px solid $light-color;
+      }
+    }
+    &-2, &-3 {
+      width: 18%;
+      @media screen and (max-width: 768px) {
+        width: 50%;
+        margin-bottom: 25px;
+      }
+      @media screen and (max-width: 480px) {
+        width: 100%;
+        border-bottom: 1px solid $light-color;
+      }
+    }
+    &-4 {
+      width: 22%;
+      @media screen and (max-width: 768px) {
+        width: 50%;
+        margin-bottom: 25px;
+      }
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+    }
+    .descr {
+      margin: 27px 0 15px;
+      padding: 20px 0;
+      font-size: 14px;
+      color: #fff;
+      position: relative;
+      line-height: 1.8;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 90%;
+        height: 100%;
+        border-top: 1px solid #38475f;
+        border-bottom: 1px solid #38475f;
+        top: 0;
+        left: 0;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+    .dev {
+      color: #c2c2c2;
+      @media screen and (max-width: 480px) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    > * {
+      text-align: center;
+    }
+  }
+}

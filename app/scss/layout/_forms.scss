@@ -1,0 +1,93 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to forms of the site/application.
+// -----------------------------------------------------------------------------
+
+.forms-group {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0,0,0,0.5);
+  padding: 43px 20px;
+  z-index: 2;
+  align-items: center;
+  .forms-group-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #67717c;
+    font-size: 1.8rem;
+    color: #e5e5e5;
+    margin-right: 25px;
+    padding-left: 12px;
+      max-width: 140px;
+      min-height: 30px;
+      border-radius: 0;
+      @media screen and (max-width: 992px) {
+        margin-right: 0;
+      }
+      option {
+        background-color: $light-color;
+        color: $text-color;
+        &[disabled] {
+          display: none;
+        }
+      }
+  }
+  @media screen and (max-width: 992px) {
+    flex-wrap: wrap;
+    > * {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $light-grey;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $light-grey;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $light-grey;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $light-grey;
+}
+
+.select-wrapper {
+  position: relative;
+  select {
+    z-index: 1;
+    &#countries {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      position: relative;
+      outline: 0;
+      width: 100%;
+      cursor: pointer;
+      @media screen and (max-width: 992px) {
+          padding-right: 20px;
+        }
+      option {
+        transition: all 0.2 linear;
+        background-color: $light-color;
+        &:hover {
+          background-color: transparent;
+          color: $brand-color;
+        }
+      }
+    }
+  }
+  &:after {
+    position: absolute;
+    content: "\f107";
+    top: 50%;
+    right: 5px;
+    font-size: 2.4rem;
+    font-family: fontawesome;
+    color: $light-color;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+}

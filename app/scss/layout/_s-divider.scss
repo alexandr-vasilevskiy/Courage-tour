@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to s-banner of the site/application.
+// -----------------------------------------------------------------------------
+
+.s-divider {
+  padding: 45px 0;
+  background: url(../img/divider-bg.jpg) no-repeat;
+  position: relative;
+  background-size: cover;
+  .overlay {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(6,10,86,0.55);
+  }
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+  h2 {
+    padding-bottom: 32px;
+  }
+}

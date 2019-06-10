@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+
+.btn {
+  padding: 10px 30px;
+  background-color: $brand-color;
+  color: $text-color;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  border: 2px solid $brand-color;
+  display: inline-block;
+  &:hover {
+    background-color: transparent;
+    color: $brand-color;
+  }
+  &-arrow {
+    border-radius: 50%;
+    padding: 17px;
+    text-align: center;
+    position: relative;
+    .fa {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      font-size: 2.2rem;
+    }
+  }
+  &-divider {
+    max-width: 250px;
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,280 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the navigations of the site/application.
+// -----------------------------------------------------------------------------
+
+.subnav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 13px 0;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+  .address, .phone {
+    color: $light-grey;
+    margin-right: 60px;
+    .fa {
+      transform: translateY(2px);
+      font-size: 2.2rem;
+      margin-right: 3px;
+    }
+    a {
+      color: $light-grey;
+      font-size: 1.4rem;
+      margin-left: 5px;
+      &:hover {
+        color: $brand-color;
+      }
+    }
+  }
+  .address {
+    margin-right: 40px;
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+  &-footer {
+    flex-direction: column;
+    margin: 0;
+    > * {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    .address, .phone {
+      margin-right: 0;
+      @media screen and (max-width: 1200px) {
+        display: block;
+      }
+    }
+    .phone {
+      padding-bottom: 20px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 85%;
+        height: 1px;
+        border-bottom: 1px solid #38475f;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+      }
+    }
+    .social {
+      padding: 10px 13px; 
+    }
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+header {
+  @media screen and (max-width: 992px) {
+    nav {
+      text-align: right;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      pointer-events: none;
+    }
+  }
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  margin: 0;
+  border-radius: 10px;
+  background-color: $brand-color;
+  padding: 0 15px;
+  .main-menu-item {
+    position: relative;
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+    .main-menu-link {
+      color: $text-color;
+      padding: 12px 8px;
+      font-size: 1.8rem;
+      display: flex;
+      @media screen and (max-width: 992px) {
+        justify-content: center;
+        font-size: 1.2em;
+        padding: 5px 100px;
+        white-space: nowrap;
+      }
+      @media screen and (max-width: 480px) {
+        padding: 5px 40px;
+      }
+      .fa {
+        margin-left: 5px;
+        font-size: 2.25rem;
+        @media screen and (max-width: 992px) {
+          display: none;
+        }
+      }
+      &:hover {
+        color: $light-color;
+      }
+    }
+    .sub-menu {
+      display: none;
+      list-style-type: none;
+      padding: 20px 28px;
+      background-color: rgba(#3397e2, 0.7);
+      min-width: 200px;
+      top: 100%;
+      left: -20px;
+      position: absolute;
+      flex-direction: column;
+      @media screen and (max-width: 992px) {
+        display: none !important;
+      }
+      .sub-menu-item {
+        .sub-menu-link {
+          color: $light-color;
+          font-size: 1.4rem;
+          padding-bottom: 20px;
+          &:hover {
+            color: $brand-color;
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 14px;
+        }
+      }
+    }
+    &:hover {
+      .sub-menu {
+        display: flex;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    transform: translateY(-100%);
+    transition: transform .3s ease-out;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform-origin: top center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: $brand-color;
+  }
+}
+
+.social {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  margin: 0 2px 0 0;
+  .social-item {
+    list-style-type: none;
+    margin-right: 25px;
+    &:last-child {
+      margin-right: 0;
+    }
+    .facebook, .instagram {
+      width: 2.2rem;
+      height: 2.2rem;
+      display: flex;
+      background: url(../img/svg/facebook.svg) no-repeat;
+      &:hover {
+        background: url(../img/svg/facebook-hover.svg) no-repeat;
+      }
+    }
+    .instagram {
+      background: url(../img/svg/instagram.svg) no-repeat;
+      &:hover {
+        background: url(../img/svg/instagram-hover.svg) no-repeat;
+      }
+    }
+  }
+  &-footer {
+    @media screen and (max-width: 1200px) {
+      justify-content: center;
+    }
+  }
+}
+
+
+.footer {
+  .menu-nav, .menu-sup {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    .menu-nav-item, .menu-sup-item {
+      margin-bottom: 11px;
+      .menu-nav-link, .menu-sup-link {
+        color: $light-color;
+        font-size: 1.4rem;
+        &:hover {
+          color: $brand-color;
+        }
+      }
+    }
+  }
+}
+
+
+.burger {
+  display: none;
+  margin-left: auto;
+  @media screen and (max-width: 992px) {
+    display: block;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    &:before, &:after {
+      content: '';
+      color: $brand-color;
+      background: $brand-color;
+      width: 30px;
+      height: 5px;
+      left: 5px;
+      position: absolute;
+      border-radius: 3px;
+      transform: rotate(0deg);
+      transition: transform .3s ease-out, box-shadow .2s ease-out;
+    }
+    &:before {
+      top: 5px;
+      box-shadow: 0 10px 0 0 $brand-color;
+      transform-origin: top left;
+    }
+    &:after {
+      bottom: 5px;
+      transform-origin: bottom left;
+    }
+    &.active {
+      &:before {
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 0 $brand-color;
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+      & + nav {
+        height: auto;
+        transition: 0.2s linear all;
+        pointer-events: all;
+      }
+      & + nav .main-menu {
+        transform: translateY(0);
+        z-index: 2;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    margin-top: 20px;
+  }
+}

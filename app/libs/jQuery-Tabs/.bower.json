@@ -1,0 +1,36 @@
+{
+  "name": "jQuery-Tabs",
+  "version": "1.2.0",
+  "homepage": "https://github.com/jralph/jquery-tabs",
+  "authors": [
+    "Joseph Ralph (joe@joescode.co.uk)"
+  ],
+  "description": "A simple and lightweight jquery tab interface plugin.",
+  "main": "tabs.js",
+  "keywords": [
+    "tabs",
+    "jquery",
+    "plugin",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "README.md",
+    "LICENSE",
+    "bower.json",
+    ".gitignore"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10.2"
+  },
+  "_release": "1.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.0",
+    "commit": "e72e4d96e217e5773304579300f5b1bd15f43daa"
+  },
+  "_source": "https://github.com/jralph/jQuery-Tabs.git",
+  "_target": "^1.2.0",
+  "_originalSource": "jQuery-Tabs",
+  "_direct": true
+}
