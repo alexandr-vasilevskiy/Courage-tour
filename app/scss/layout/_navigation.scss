@@ -115,9 +115,6 @@ header {
       .fa {
         margin-left: 5px;
         font-size: 2.25rem;
-        @media screen and (max-width: 992px) {
-          display: none;
-        }
       }
       &:hover {
         color: $light-color;
@@ -134,7 +131,14 @@ header {
       position: absolute;
       flex-direction: column;
       @media screen and (max-width: 992px) {
-        display: none !important;
+        position: relative;
+        left: 0;
+        background-color: transparent;
+        min-width: inherit;
+        padding: 0;
+        .sub-menu-item {
+          text-align: center;
+        }
       }
       .sub-menu-item {
         .sub-menu-link {

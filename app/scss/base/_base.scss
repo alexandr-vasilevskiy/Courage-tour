@@ -13,13 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding-bottom: 330.3px;
-  @media screen and (max-width: 1200px) {
-    padding-bottom: 316px;
-  }
-  @media screen and (max-width: 1120px) {
-    padding-bottom: 330.3px;
-  }
+  padding-bottom: 300.3px;
+  min-height: 100vh;
   @media screen and (max-width: 807px) {
     padding-bottom: 0;
   }
@@ -88,6 +83,8 @@ img {
 .h3 {
 	font-size: 1.875rem;
   margin: 6px 0 2px;
+  font-family: $text-font-stack;
+  font-weight: 400;
 }
 .h4 {
   font-weight: 400;
@@ -105,7 +102,7 @@ img {
  * Basic styles for containers
  */
 .container-large {
-  max-width: 1780px;
+  max-width: 1850px;
   margin: 0 auto;
   margin-left: auto;
   margin-right: auto;

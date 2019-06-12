@@ -23,7 +23,9 @@
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
 	<link rel="stylesheet" href="css/main.min.css">
+	 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
 </head>
 
@@ -148,21 +150,21 @@
 	</section>
 
 	<section class="s-hottour">
-		<div class="tour-tabs tabs-block">
+		<div class="tour-tabs tabs-block" id="tabs">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-						<ul id="tabs" class="tabs-block-nav">
+						<ul id="" class="tabs-block-nav">
 
-							<li class="tabs-block-link"><a data-tab="#tab1" href="#">Горящие туры</a></li>
-							<li class="tabs-block-link"><a data-tab="#tab2" href="#">Популярные туры</a></li>
+							<li class="tabs-block-link"><a data-tab="#tab1" href="#fragment-1">Горящие туры</a></li>
+							<li class="tabs-block-link"><a data-tab="#tab2" href="#fragment-2">Популярные туры</a></li>
 
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="container-large">
-				<div id="tab1" class="tabs-block-item" data-tabs-default data-tab-content>
+				<div id="fragment-1" class="tabs-block-item" data-tabs-default data-tab-content>
 					<div class="owl-carousel hottour-carousel">
 						<div class="hottour-carousel-item">
 							<div class="img-wrapper">
@@ -208,7 +210,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="tab2" class="tabs-block-item" data-tab-content>
+				<div id="fragment-2" class="tabs-block-item" data-tab-content>
 					<div class="owl-carousel populartour-carousel">
 						<div class="populartour-carousel-item">
 							<div class="img-wrapper">
@@ -298,19 +300,29 @@
 				<h2 class="h2 h2-reverse">Хочу предложение по туру</h2>
 				<div class="col-md-12">
 					<form action="/" class="forms-group">
-						<input class="forms-group-input" type="text" placeholder="Имя">
-						<input class="forms-group-input" type="text" placeholder="Email">
-						<input class="forms-group-input" type="text" placeholder="Телефон">
-						<div class="select-wrapper">
-							<select class="forms-group-input" name="countries" id="countries">
-								<option selected disabled>Страна тура</option>
-								<option>Турция</option>
-								<option>Египет</option>
-								<option>Шри-Ланка</option>
-								<option>Доминикана</option>
-							</select>
+						<div class="form-field">
+							<input class="forms-group-input" type="text" placeholder="Имя" required>
 						</div>
-						<input class="btn btn-divider" type="submit" value="Получить предложение">
+						<div class="form-field">
+							<input class="forms-group-input" type="email" placeholder="Email" required>
+							<span class="form-error">Это поле должно содержать E-Mail в формате example@site.com</span>
+						</div>
+						<div class="form-field">
+							<input class="forms-group-input" type="tel" placeholder="Телефон" minlength="18" maxlength="18" required>
+							<span class="form-error">Это поле должно содержать телефон в формате +8 (123) 456-78-90</span>
+						</div>
+						<div class="form-field">
+							<div class="select-wrapper">
+								<select class="forms-group-input" name="countries" id="countries">
+									<option selected disabled>Страна тура</option>
+									<option>Турция</option>
+									<option>Египет</option>
+									<option>Шри-Ланка</option>
+									<option>Доминикана</option>
+								</select>
+							</div>
+						</div>
+						<button class="btn btn-divider" type="submit">Получить предложение</button>
 					</form>
 				</div>
 			</div>
@@ -327,7 +339,6 @@
 								<img class="preview" src="img/logo-footer.png" alt="">
 							</div>
 							<div class="descr">Кураж тур агенство,которое предоставляет услуги по поиску, оформлению и подбору туров для вас и ваших родных.</div>
-							<div class="dev">Создание сайта — <a href="#"><img class="preview" src="img/logo-dev.png" alt=""></a></div>
 						</div>
 						<div class="footer-col footer-col-2">
 							<h4 class="h4">Навигация</h4>
@@ -366,11 +377,15 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="dev">Создание сайта — <a href="#"><img class="preview" src="img/logo-dev.png" alt=""></a></div>
+				</div>
 			</div>	
 		</div>
 	</footer>
 
-	<!-- <script src="https://cdn.jsdelivr.net/npm/progressive-image.js@1.3.0/dist/progressive-image.js"></script> -->
 	<script src="js/scripts.min.js"></script>
 </body>
 </html>

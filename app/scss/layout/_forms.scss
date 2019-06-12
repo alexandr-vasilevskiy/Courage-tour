@@ -10,19 +10,36 @@
   padding: 43px 20px;
   z-index: 2;
   align-items: center;
-  .forms-group-input {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #67717c;
-    font-size: 1.8rem;
-    color: #e5e5e5;
-    margin-right: 25px;
-    padding-left: 12px;
+  .form-field {
+    position: relative;
+    @media screen and (max-width: 550px) {
+      width: 100%;
+    }
+    .forms-group-input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #67717c;
+      font-size: 1.8rem;
+      color: #e5e5e5;
+      margin-right: 25px;
+      padding-left: 12px;
       max-width: 140px;
       min-height: 30px;
       border-radius: 0;
+      outline: none;
       @media screen and (max-width: 992px) {
         margin-right: 0;
+      }
+      @media screen and (max-width: 550px) {
+        width: 100%;
+        max-width: inherit;
+        margin-bottom: 15px;
+      }
+      @media screen and (max-width: 480px) {
+        margin-bottom: 40px;
+      }
+      &:invalid:not(:placeholder-shown) {
+        border-color: red;
       }
       option {
         background-color: $light-color;
@@ -31,6 +48,17 @@
           display: none;
         }
       }
+    }
+    .form-error {
+      color: red;
+      text-align: left;
+      font-size: 1.15rem;
+      display: block;
+      display: none;
+      position: absolute;
+      bottom: 100%;
+      background-color: rgba(#000, 0.5);
+    }
   }
   @media screen and (max-width: 992px) {
     flex-wrap: wrap;
@@ -52,6 +80,9 @@
 }
 :-moz-placeholder { /* Firefox 18- */
   color: $light-grey;
+}
+input:invalid:not(:placeholder-shown) + .form-error {
+  display: block;
 }
 
 .select-wrapper {
@@ -80,6 +111,7 @@
     }
   }
   &:after {
+
     position: absolute;
     content: "\f107";
     top: 50%;
@@ -89,5 +121,8 @@
     color: $light-color;
     transform: translateY(-50%);
     z-index: 0;
+    @media screen and (max-width: 550px) {
+      content: none;
+    }
   }
 }

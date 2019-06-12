@@ -36,6 +36,7 @@ $(function() {
     loop: true,
     nav: true,
     dots: false,
+    margin: 25,
     navText: ['<img style="transform: rotate(180deg)" src="img/svg/arrow.svg">', '<img src="img/svg/arrow.svg">'],
     smartSpeed: 700,
     responsiveClass: true,
@@ -53,7 +54,7 @@ $(function() {
   });
 
   // tabs
-  $('#tabs a').tabs();
+  $('#tabs').tabs();
 
   new SimpleBar(document.querySelector('.scroll'));
 

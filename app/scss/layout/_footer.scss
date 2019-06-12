@@ -15,8 +15,11 @@ footer {
 
 .footer {
   display: flex;
-  margin: 50px 0;
+  margin: 50px 0 0;
   justify-content: space-between;
+  @media screen and (max-width: 992px) {
+    justify-content: center;
+  }
   @media screen and (max-width: 768px) {
     flex-wrap: wrap;
   }
@@ -78,16 +81,21 @@ footer {
         }
       }
     }
-    .dev {
-      color: #c2c2c2;
-      @media screen and (max-width: 480px) {
-        margin-bottom: 15px;
-      }
-    }
   }
   @media screen and (max-width: 1200px) {
     > * {
       text-align: center;
     }
+  }
+}
+
+
+.dev {
+  color: #c2c2c2;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    margin-left: 0;
   }
 }

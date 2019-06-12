@@ -4,35 +4,47 @@
 
 
 .tour-tabs {
+  border: none !important;
   .tabs-block-nav {
     list-style-type: none;
     display: flex;
-    padding: 0;
-    margin: 75px 0 55px;
+    padding: 0 !important;
+    margin: 67px 0 35px!important;
+    background: transparent;
+    border: none;
+    .tabs-block-link {
+      background: transparent;
+      border: none;
+      a {
+        font-size: 2rem;
+        margin-right: 20px;
+        color: $text-color;
+        display: flex;
+        border-bottom: 2px solid transparent;
+        padding: 0;
+        @media screen and (max-width: 480px) {
+          margin: 10px 0;
+        }
+        &:hover {
+          border-bottom: 2px solid $text-color;
+        }
+      }
+      &.ui-tabs-active {
+        cursor: pointer;
+        a {
+          color: $brand-color;
+          &:hover {
+            border-bottom: 2px solid $brand-color;
+          }
+        }
+      }
+    }
     @media screen and (max-width: 480px) {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin: 35px 0 10px;
     }
-    a {
-      font-size: 2rem;
-      margin-right: 40px;
-      color: $text-color;
-      display: flex;
-      border-bottom: 2px solid transparent;
-      @media screen and (max-width: 480px) {
-        margin: 10px 0;
-      }
-      &:hover {
-        border-bottom: 2px solid $text-color;
-      }
-      &.tab-active {
-        color: $brand-color;
-        &:hover {
-          border-bottom: 2px solid $brand-color;
-        }
-      }
-    }
+    
   }
 }

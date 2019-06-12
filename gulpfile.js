@@ -30,8 +30,8 @@ var gulp           = require('gulp'),
 gulp.task('common-js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jQuery-Tabs/jquery-ui.min.js',
 		'app/libs/owl.carousel/owl.carousel.min.js',
-		'app/libs/jQuery-Tabs/tabs.min.js',
 		'app/libs/simplebar/simplebar.min.js',
 		'app/libs/progressive-image.js-master/progressive-image.js',
 		'app/js/common.js',
